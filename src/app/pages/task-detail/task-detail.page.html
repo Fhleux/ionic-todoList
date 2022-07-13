@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>TODO app</ion-title>
+    <ion-buttons slot="end">
+      <ion-button shape="round" size="large" expand="full" id="click-trigger">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-popover trigger="click-trigger" triggerAction="click">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item [button]="true" [detail]="false">Option 1</ion-item>
+              <ion-item [button]="true" [detail]="false">
+                <ion-button expand="full" (click)="logout()">Logout</ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main">
+    <form [formGroup]="detailsForm">
+      <ion-label>Title:</ion-label>
+      <ion-input formControlName="title" ></ion-input>
+      <ion-label>Description:</ion-label>
+      <ion-input formControlName="description"></ion-input>
+      <div class="buttons">
+        <ion-button class="save-button" (click)="saveChanges()" fill="outline" strong="true" >Save</ion-button>
+        <ion-button class="delete-button" fill="outline" (click)="deleteTask()">
+          <ion-icon name="trash-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </form>
+  </div>
+</ion-content>

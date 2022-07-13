@@ -1,0 +1,42 @@
+ion-content {
+  --background: linear-gradient(90deg, rgb(56, 15, 124) 0%, rgb(85, 18, 108) 60%, rgb(115, 36, 144) 100%);
+
+  .main {
+    background: #f1f1f1;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
+  }
+  ion-label{
+    color: #000;
+  font-weight: bolder;
+  }
+  ion-input {
+    color: #000;
+  }
+  ion-button{
+    margin: 5px;
+    height: 40px;  
+    --border-radius: 10px;
+  }
+  .buttons{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    .save-button {
+      color: rgb(48, 179, 255);
+      --border-color: rgb(48, 179, 255);
+      --box-shadow: 5px 1px 10px rgba(57, 167, 214, .3),
+        -5px -1px 10px  rgba(57, 167, 214, .3);
+    }
+    .delete-button {
+      color: rgb(223, 38, 75);
+      --border-color: rgb(223, 38, 75);
+      --box-shadow: 5px 1px 10px rgba(214, 57, 73, 0.3),
+        -5px -1px 10px  rgba(214, 57, 73, 0.3);
+    }
+  }
+}

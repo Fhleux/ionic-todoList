@@ -1,0 +1,62 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>TODO app</ion-title>
+    <ion-buttons slot="end">
+      <ion-button shape="round" size="large" expand="full" id="click-trigger">
+        <ion-icon name="person-circle-outline"></ion-icon>
+      </ion-button>
+      <ion-popover trigger="click-trigger" triggerAction="click">
+        <ng-template>
+          <ion-content>
+            <ion-list>
+              <ion-item [button]="true" [detail]="false">Option 1</ion-item>
+              <ion-item [button]="true" [detail]="false">
+                <ion-button expand="full" (click)="logout()">Logout</ion-button>
+              </ion-item>
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="main">
+    <form (ngSubmit)="addTaskOnSubmit()" [formGroup]="formData">
+      <ion-card>
+        <ion-card-header class="add-header">
+          <ion-card-title>Add task:</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item color="silver" lines="none">
+            <ion-label position="stacked">Task title:</ion-label>
+            <ion-input clearInput formControlName="title"></ion-input> 
+          </ion-item>
+          <ion-item color="silver" lines="none">
+            <ion-label position="stacked">Description</ion-label>
+            <ion-textarea placeholder="Enter a description" formControlName="description"></ion-textarea>
+          </ion-item>
+          <ion-button type="submit" >Add</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </div>
+
+  <ion-row>
+    <ion-col sizeLg="4" sizeMd="6" sizeXs="11" *ngFor="let task of tasks">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{task.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content >
+          <div class="detail-description" >
+            <ion-label position="fixed">{{task.description}}</ion-label>
+          </div>
+          <!-- <ion-input value="{{task.description}}" disabled></ion-input> -->
+          <ion-button href="/task/{{task.id}}">View details</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

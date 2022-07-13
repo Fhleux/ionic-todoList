@@ -1,0 +1,38 @@
+ion-content {
+  --padding-top: 10%;
+  --padding-start: 20%;
+  --padding-end: 20%;
+  --background: linear-gradient(90deg, rgb(56, 15, 124) 0%, rgb(85, 18, 108) 60%, rgb(115, 36, 144) 100%);
+}
+
+ion-item {
+  --background: #fff;
+  --color: #000;
+  --highlight-color-valid: rgb(66, 151, 230);
+}
+
+.input-group {
+  background: #fff;
+  --background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.errors {
+  font-size: small;
+  color: #fff;
+  background: var(--ion-color-danger);
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.button-group {
+  .login{
+    color: #f1f1f1;
+    --background: rgb(225, 49, 234);
+    --box-shadow: 5px 1px 10px rgba(225, 49, 234, .5),
+        -5px -1px 10px  rgba(225, 49, 234, .5);
+  }
+}
