@@ -44,7 +44,7 @@
   </div>
 
   <ion-row>
-    <ion-col sizeLg="4" sizeMd="6" sizeXs="11" *ngFor="let task of tasks">
+    <ion-col sizeLg="4" sizeMd="6" sizeXs="12" *ngFor="let task of tasks; trackBy: trackKeyExtractor" #templateList>
       <ion-card>
         <ion-card-header>
           <ion-card-title>{{task.title}}</ion-card-title>

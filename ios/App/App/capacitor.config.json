@@ -1,0 +1,6 @@
+{
+	"appId": "com.fhleux1.app",
+	"appName": "todoList",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
